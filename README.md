@@ -60,4 +60,6 @@ npm run build
 npm run build:client:desktop
 ```
 
-GraphQL 스키마를 수정한 후에는 `npm run schema:export`를 실행합니다. `npm run schema:check`는 생성 결과가 저장된 스키마와 일치하는지 확인합니다. GitHub Actions는 Vue 앱 빌드, 백엔드와 PostgreSQL 테스트, Windows 및 macOS의 Tauri 컴파일을 실행합니다.
+GraphQL 스키마를 수정한 후에는 `npm run schema:export`를 실행합니다. `npm run schema:check`는 생성 결과가 저장된 스키마와 일치하는지 확인합니다.
+
+GitHub Actions의 **Checks**는 기본 브랜치에 워크플로가 반영된 뒤 **Actions → Checks → Run workflow**에서 수동으로 실행합니다. Vue 앱 빌드, 백엔드와 PostgreSQL 테스트, Windows 및 macOS의 Tauri 컴파일을 실행합니다. Tauri 검사에는 `apps/client/src-tauri/Cargo.lock`이 필요합니다.
