@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "installed_version": "2.18.0",
+  "hash_policy": {
+    "text": "text-v1",
+    "binary": "binary-v1"
+  },
+  "managed_block": {
+    "sha256": "03111112e89b7244287db143b4a0b00ecf4ecaa0d74efb5e3f9820cffa80d1e7"
+  },
+  "managed_files": {
+    ".agents/agents/auditor.md": {
+      "type": "text",
+      "sha256": "707a632bd206a6e917e68a21fc299b697327d6dd1137c8519fe476786f4cc959"
+    },
+    ".agents/skills/gitignore-generator/SKILL.md": {
+      "type": "text",
+      "sha256": "482001112ede96dbe724c550dce31a57cb21305f8d564c6c76112d83822176f6"
+    },
+    ".agents/skills/gitignore-generator/scripts/gitignore.ps1": {
+      "type": "text",
+      "sha256": "14f46b06261d3efbafb1b70b3d77712b2004da80547732331cb27fce2a6ee4e3"
+    },
+    ".agents/skills/gitignore-generator/scripts/gitignore.sh": {
+      "type": "text",
+      "sha256": "c23de95a237f373956168c34d98382447fea0bdda25297eec3764b4ee539764e"
+    },
+    ".agents/skills/plan-refiner/SKILL.md": {
+      "type": "text",
+      "sha256": "202ed8bcdc3752f242b0230068b2306064cde965f0c0cdbe64e57c56a9147848"
+    },
+    ".agents/skills/python-ecosystem-kb/SKILL.md": {
+      "type": "text",
+      "sha256": "7d0f66fb24d4489400affd9e9c4a589d5811a01b7f77b8f3934715dea930c214"
+    },
+    ".agents/skills/python-ecosystem-kb/resources/wikidocs-14021.md": {
+      "type": "text",
+      "sha256": "2cfaed2524dcee88fae18ba7ede7d40dddac89887c8a0ff1d76b55404d426bea"
+    },
+    "guides/README.md": {
+      "type": "text",
+      "sha256": "4ada618f3a20492177ebab1ab184b0fe5ebb1da93090360df544ac9c90a6cc50"
+    },
+    "guides/prompt-context-engineering.md": {
+      "type": "text",
+      "sha256": "00aa49a550a3c89c1716e827ebfb6c437c94c298fc6987e6c34fd9d1507db1df"
+    },
+    "rules/architecture/ai-llm-rag.md": {
+      "type": "text",
+      "sha256": "ec1efe87087b89661bfe2e8276d03c8a10e16cdcf5dae6747ab5d4d6507af12c"
+    },
+    "rules/architecture/backend-api.md": {
+      "type": "text",
+      "sha256": "0a66ec3c734229b808b47e0ff01b972d9bf9bd26dc27dc28d532ae6e8e3ac799"
+    },
+    "rules/architecture/database-orm.md": {
+      "type": "text",
+      "sha256": "cb8da86b235ef4fdaf65c73fec64c70be23c0f2235de524582868b2a4ba3b754"
+    },
+    "rules/architecture/library-package.md": {
+      "type": "text",
+      "sha256": "720fb60316d633926079516403e1d3997c095f45193ca102d62b93da2a221d01"
+    },
+    "rules/architecture/monorepo.md": {
+      "type": "text",
+      "sha256": "70034fe98c0f95e9af07e08338d722e0bb4c64ed1aa77b896a14c9946eca3d5e"
+    },
+    "rules/architecture/recommended-external-skills.md": {
+      "type": "text",
+      "sha256": "7212cf78689972610adc840d1f9081c4344a6d034568f24c1cd42218cf278af1"
+    },
+    "rules/architecture/web-frontend.md": {
+      "type": "text",
+      "sha256": "99e12e35066b55dd039411407090f42ce553f2205ce30a919fd0db3ee278dbd3"
+    },
+    "rules/frameworks/django.md": {
+      "type": "text",
+      "sha256": "07b55ecde2c4c3f7d0d31261eace58b40b0b1a23fa08326c4127dc0db82e4e61"
+    },
+    "rules/frameworks/fastapi.md": {
+      "type": "text",
+      "sha256": "e26d7e4f5c0b10c9bf0363f18459362c122a188b56a3c3b692aa449323bbb0a7"
+    },
+    "rules/frameworks/litestar.md": {
+      "type": "text",
+      "sha256": "1ec3e0c98475d40e5d628a786410201cec0b41e2ec357ef072402c26643c171c"
+    },
+    "rules/frameworks/next.md": {
+      "type": "text",
+      "sha256": "05ea44b25b61399f4e221aaf14a3af88f0ba83ab81e376b7423fbdfacbc40302"
+    },
+    "rules/frameworks/nuxt.md": {
+      "type": "text",
+      "sha256": "1dfe446f5d252724a948441fa4a8537d8e2388ff248c049f1737a26af795a727"
+    },
+    "rules/frameworks/react.md": {
+      "type": "text",
+      "sha256": "7a4d172068497ead8f4c481346dc6a4ae95ffa4febda413388f0fc49dbc3af64"
+    },
+    "rules/frameworks/vue.md": {
+      "type": "text",
+      "sha256": "b70a0f9dad79191eb193684a35769c1f3d2af6df2262abaee4b3099089e00758"
+    },
+    "rules/packaging/deployment-nginx.md": {
+      "type": "text",
+      "sha256": "442cca9be053bfbe1fc33e4bcd51e6bfca26afc724e7d38a708df9785a799689"
+    },
+    "rules/packaging/deployment-python-server.md": {
+      "type": "text",
+      "sha256": "eea8b95e0a0908bbe53aaa2cec1876d0137e7e75cb23b9b980bcdff59f74afa7"
+    },
+    "rules/packaging/docker.md": {
+      "type": "text",
+      "sha256": "83424d64897b038b06f62a8dc320855ef606c064aacfea59742878b71257d186"
+    },
+    "rules/packaging/package-npm.md": {
+      "type": "text",
+      "sha256": "d0fa72ecc6dfdb63a6fd29a08a4f4bed295da7ca767c20457b2a320405941fd5"
+    },
+    "rules/packaging/package-python.md": {
+      "type": "text",
+      "sha256": "16053150ede6691d3fe5d3fb192f2f55f508ba1e2c8d44906dffcf95b19abdaa"
+    },
+    "rules/styles/cpp.md": {
+      "type": "text",
+      "sha256": "f2fd8fd03c9edf823b58a253537a0e0bbbaceda1a5ee3d609e76e2640d31d409"
+    },
+    "rules/styles/csharp.md": {
+      "type": "text",
+      "sha256": "e7c33b22c9be3b5c005694cb1b92d0afa1d516ed033599bf490a96a0b3665270"
+    },
+    "rules/styles/dart.md": {
+      "type": "text",
+      "sha256": "09498f041c4c0b474487eb13c67e34ac4b78c0a17a8499e49be3f4ee551aa26a"
+    },
+    "rules/styles/go.md": {
+      "type": "text",
+      "sha256": "2accb0975ce97595e48f7a24defb042391f9e9ac765431bcf95804ddfcaf9751"
+    },
+    "rules/styles/html-css.md": {
+      "type": "text",
+      "sha256": "e7e0229048dab59eb6f34c84bc24a67d847313e95770cacbafd131eeaa2c825b"
+    },
+    "rules/styles/javascript.md": {
+      "type": "text",
+      "sha256": "248cff6614f0650dc7752b7145f6d93adb31c625e2000c492cbd9209850efcb4"
+    },
+    "rules/styles/python.md": {
+      "type": "text",
+      "sha256": "fadeb2d9dc5615876e03ae922a61edf1e9959e1e4c2fa94719177ecb44e4c1f3"
+    },
+    "rules/styles/typescript.md": {
+      "type": "text",
+      "sha256": "6604c3b6f979566469eabdba2cbc8f0dcab681c16e4d04032f62fa83974759f7"
+    }
+  },
+  "project_rules_guidance_added": true
+}
