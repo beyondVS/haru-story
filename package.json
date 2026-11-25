@@ -6,7 +6,10 @@
     "npm": ">=11 <12"
   },
   "packageManager": "npm@11.19.1",
-  "workspaces": ["apps/client", "services/admin"],
+  "workspaces": [
+    "apps/client",
+    "services/admin"
+  ],
   "scripts": {
     "dev:client": "npm run tauri --workspace=apps/client -- dev",
     "dev:client:web": "npm run dev --workspace=apps/client",
@@ -14,8 +17,21 @@
     "dev:backend": "uv run --project services/backend --locked python -m granian --interface asgi --host 127.0.0.1 --port 8000 haru_backend.app:app",
     "build": "npm run build --workspaces",
     "build:client:desktop": "npm run tauri --workspace=apps/client -- build --no-bundle -- --locked",
-    "check": "npm run typecheck --workspaces && uv run --project services/backend --locked python -m pytest && npm run schema:check",
+    "lint:web": "eslint \"apps/client/src/**/*.{ts,vue}\" \"services/admin/src/**/*.{ts,vue}\" apps/client/vite.config.ts services/admin/vite.config.ts",
+    "lint": "npm run lint:web && uv run --project services/backend --locked ruff check --config services/backend/pyproject.toml services/backend/src services/backend/tests tooling/export_graphql_schema.py",
+    "format:web": "prettier --write apps/client/src services/admin/src apps/client/index.html services/admin/index.html apps/client/vite.config.ts services/admin/vite.config.ts",
+    "format:check:web": "prettier --check apps/client/src services/admin/src apps/client/index.html services/admin/index.html apps/client/vite.config.ts services/admin/vite.config.ts",
+    "format": "npm run format:web && uv run --project services/backend --locked ruff format --config services/backend/pyproject.toml services/backend/src services/backend/tests tooling/export_graphql_schema.py",
+    "format:check": "npm run format:check:web && uv run --project services/backend --locked ruff format --check --config services/backend/pyproject.toml services/backend/src services/backend/tests tooling/export_graphql_schema.py",
+    "check": "npm run lint && npm run format:check && npm run typecheck --workspaces && uv run --project services/backend --locked python -m pytest && npm run schema:check",
     "schema:export": "uv run --project services/backend --locked python tooling/export_graphql_schema.py",
     "schema:check": "npm run schema:export -- --check"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-typescript": "14.9.0",
+    "eslint": "10.15.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-vue": "10.12.1",
+    "prettier": "3.10.1"
   }
 }

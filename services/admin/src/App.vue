@@ -15,9 +15,10 @@ async function checkConnection() {
       signal: AbortSignal.timeout(5000),
     })
     const result: { data?: { serviceStatus?: string } } = await response.json()
-    status.value = response.ok && result.data?.serviceStatus === 'ok'
-      ? '서버 연결됨'
-      : '서버 연결 실패'
+    status.value =
+      response.ok && result.data?.serviceStatus === 'ok'
+        ? '서버 연결됨'
+        : '서버 연결 실패'
   } catch {
     status.value = '서버 연결 실패'
   } finally {
@@ -32,7 +33,9 @@ onMounted(checkConnection)
   <main>
     <h1>하루 이야기 관리자</h1>
     <p role="status">{{ status }}</p>
-    <button type="button" :disabled="checking" @click="checkConnection">다시 확인</button>
+    <button type="button" :disabled="checking" @click="checkConnection">
+      다시 확인
+    </button>
   </main>
 </template>
 

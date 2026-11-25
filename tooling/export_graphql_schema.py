@@ -13,7 +13,9 @@ def main() -> None:
     content = schema.as_str().rstrip() + "\n"
     if args.check:
         if not output.is_file() or output.read_text(encoding="utf-8") != content:
-            parser.exit(1, "GraphQL schema is out of date. Run npm run schema:export.\n")
+            parser.exit(
+                1, "GraphQL schema is out of date. Run npm run schema:export.\n"
+            )
         return
 
     output.parent.mkdir(parents=True, exist_ok=True)

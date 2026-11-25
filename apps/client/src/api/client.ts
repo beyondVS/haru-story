@@ -1,6 +1,7 @@
 import { serviceStatusQuery } from './graphql/operations/serviceStatus'
 
-const endpoint = import.meta.env.VITE_GRAPHQL_URL ||
+const endpoint =
+  import.meta.env.VITE_GRAPHQL_URL ||
   (import.meta.env.DEV ? '/graphql' : 'http://127.0.0.1:8000/graphql')
 
 export async function fetchServiceStatus(): Promise<boolean> {

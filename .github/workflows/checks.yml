@@ -16,6 +16,8 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - run: npm run lint:web
+      - run: npm run format:check:web
       - run: npm run typecheck --workspaces
       - run: npm run build
 
@@ -43,6 +45,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: uv sync --project services/backend --locked
+      - run: uv run --project services/backend --locked ruff check --config services/backend/pyproject.toml services/backend/src services/backend/tests tooling/export_graphql_schema.py
+      - run: uv run --project services/backend --locked ruff format --check --config services/backend/pyproject.toml services/backend/src services/backend/tests tooling/export_graphql_schema.py
       - run: uv run --project services/backend --locked python -m pytest
       - run: uv run --project services/backend --locked python tooling/export_graphql_schema.py --check
 

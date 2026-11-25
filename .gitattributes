@@ -1,7 +1,11 @@
 * text=auto
 
+/.gitattributes text eol=lf
+/.editorconfig text eol=lf
 /README.md text eol=lf
 /package*.json text eol=lf
+/.prettierrc.json text eol=lf
+/eslint.config.mjs text eol=lf
 /apps/** text=auto eol=lf
 /services/** text=auto eol=lf
 /contracts/** text=auto eol=lf

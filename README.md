@@ -54,6 +54,8 @@ uv run --project services/backend --env-file .env --locked python -m pytest
 
 ## 검증과 빌드
 
+`npm run lint`는 두 Vue 앱을 ESLint로, 백엔드와 GraphQL 스키마 도구를 Ruff로 검사합니다. `npm run format:check`는 Prettier와 Ruff의 서식 검사를 실행하고, `npm run format`은 같은 소스 범위에 서식을 적용합니다.
+
 ```sh
 npm run check
 npm run build
@@ -62,4 +64,4 @@ npm run build:client:desktop
 
 GraphQL 스키마를 수정한 후에는 `npm run schema:export`를 실행합니다. `npm run schema:check`는 생성 결과가 저장된 스키마와 일치하는지 확인합니다.
 
-GitHub Actions의 **Checks**는 기본 브랜치에 워크플로가 반영된 뒤 **Actions → Checks → Run workflow**에서 수동으로 실행합니다. Vue 앱 빌드, 백엔드와 PostgreSQL 테스트, Windows 및 macOS의 Tauri 컴파일을 실행합니다. Tauri 검사에는 `apps/client/src-tauri/Cargo.lock`이 필요합니다.
+GitHub Actions의 **Checks**는 기본 브랜치에 워크플로가 반영된 뒤 **Actions → Checks → Run workflow**에서 수동으로 실행합니다. 프런트엔드와 백엔드의 린트·서식 검사, Vue 앱 빌드, 백엔드와 PostgreSQL 테스트, Windows 및 macOS의 Tauri 컴파일을 실행합니다. Tauri 검사에는 `apps/client/src-tauri/Cargo.lock`이 필요합니다.
