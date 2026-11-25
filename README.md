@@ -10,8 +10,11 @@
 | `contracts/graphql` | 백엔드에서 생성한 GraphQL 스키마 |
 | `infra/local` | 로컬 PostgreSQL 17 실행 설정 |
 | `tooling` | GraphQL 스키마 생성 및 검증 명령 |
+| `docs` | 프로젝트 정책, 아키텍처 결정, 운영 문서 |
 
-클라이언트의 업무 규칙과 사용 사례는 `src/domain`과 `src/application`에, Rust 연동은 `src/adapters/tauri`에 추가합니다. 백엔드의 업무 규칙, 사용 사례, 외부 시스템 연동은 각각 `domain`, `application`, `infrastructure`에 둡니다. 첫 DB 스키마는 `services/backend/migrations`에서 관리합니다. 제품, 디자인, 아키텍처, 기술 결정, 운영 문서는 `docs/` 아래에 둡니다.
+클라이언트의 업무 규칙과 사용 사례는 `src/domain`과 `src/application`에, Rust 연동은 `src/adapters/tauri`에 추가합니다. 백엔드의 업무 규칙, 사용 사례, 외부 시스템 연동은 각각 `domain`, `application`, `infrastructure`에 둡니다. DB 마이그레이션은 `services/backend/migrations`에 둡니다.
+
+문서 배치와 작업 지침은 저장소의 문서 목차에서 찾을 수 있습니다. [프로젝트 문서 목차](docs/README.md)
 
 ## 로컬 실행
 
