@@ -1,0 +1,14 @@
+* text=auto
+
+/README.md text eol=lf
+/package*.json text eol=lf
+/apps/** text=auto eol=lf
+/services/** text=auto eol=lf
+/contracts/** text=auto eol=lf
+/infra/** text=auto eol=lf
+/tooling/** text=auto eol=lf
+/.github/** text=auto eol=lf
+*.lock text eol=lf
+*.png binary
+*.ico binary
+*.icns binary

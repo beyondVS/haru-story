@@ -1,0 +1,25 @@
+[project]
+name = "haru-backend"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "advanced-alchemy>=1,<2",
+    "asyncpg>=0.30,<1",
+    "granian>=2,<3",
+    "litestar>=2,<3",
+    "sqlalchemy>=2.0,<2.1",
+    "strawberry-graphql[asgi]>=0.280,<1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28,<1",
+    "pytest>=8,<10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
