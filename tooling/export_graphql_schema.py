@@ -14,7 +14,8 @@ def main() -> None:
     if args.check:
         if not output.is_file() or output.read_text(encoding="utf-8") != content:
             parser.exit(
-                1, "GraphQL schema is out of date. Run npm run schema:export.\n"
+                1,
+                "GraphQL schema is out of date. Run npm run graphql:schema:export.\n",
             )
         return
 
