@@ -1,24 +1,58 @@
-node_modules/
-dist/
-coverage/
-*.tsbuildinfo
-npm-debug.log*
+# 운영체제에서 생성하는 파일
+.DS_Store
+.AppleDouble/
+._*
+.fseventsd/
+.Spotlight-V100/
+.Trashes/
+[Tt]humbs.db
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.directory
+.Trash-*/
 
-.venv/
-.uv-cache/
-.npm-cache/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-pytest-cache-files-*/
-.ruff_cache/
-*.egg-info/
+# IDE 및 에디터의 로컬 설정
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+.history/
+.vs/
+*.swp
+*.swo
 
-/apps/client/src-tauri/target/
-/apps/client/src-tauri/gen/schemas/
-
+# 로컬 환경 변수와 공유 설정 예시
 .env
 .env.*
 !.env.example
-.DS_Store
-Thumbs.db
+
+# npm, Vue, Vite, TypeScript
+node_modules/
+.npm-cache/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+
+# Python, uv, pytest, Ruff
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+pytest-cache-files-*/
+.ruff_cache/
+
+# 테스트 커버리지 결과
+coverage/
+.coverage
+.coverage.*
+htmlcov/
+
+# Tauri 빌드 결과와 자동 생성 스키마
+/apps/client/src-tauri/target/
+/apps/client/src-tauri/gen/schemas/
